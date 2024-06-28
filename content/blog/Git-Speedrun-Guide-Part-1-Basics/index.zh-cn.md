@@ -4,7 +4,7 @@ title: "Git 速通指南 | Part 1: 基础"
 
 ## 1. 安装 Git
 
-请参考文章: [安装 Git](Install-Git_zh.md) .
+参考文章: [安装 Git](https://shusct.github.io/wiki/blog/install-git/) .
 
 > 📌 **注意**  
 > 如果你是 Windows 用户, 由于这个 [Issue](https://github.com/gitextensions/gitextensions/issues/5073) 尚未被解决, 我们建议使用 Git Bash (而非 PowerShell) 执行 Git 命令.
@@ -119,16 +119,47 @@ Fig.4 中的 Version 2 是当前项目的最新版本.
 
 > 💬 之后的开发过程中如果出现问题, 可以进行**版本回退**, **版本比较**等操作.
 
-## 4. 远程储存库
+## 4. 远程 Git 储存库
 
 很多时候, 我们需要在不同的电脑上部署某个项目进行多人协同开发. 因此出现 "将本地 Git 储存库同步到一个远程储存库 (例如 GitHub)" 的想法.
 
+### 4.1. 基础工作流程
 
-### 4.1. 生成 SSH 密钥并连接 GitHub
+1. SSH 密钥连接 GitHub: [4.2. 利用 SSH 密钥链接 GitHub](#42-生成-ssh-密钥并连接-github) .
+2. 已有本地储存库:
+    - [4.3. 创建一个 GitHub 储存库](#43-创建一个-github-储存库) .
+    - [4.4. 关联本地储存库与远程储存库](#44-关联本地储存库与远程储存库) .
+3. 已有远程储存库:
+    - [4.5. 直接 `clone` 远程储存库](#45-直接-clone-远程储存库) .
 
-参考文章: [利用 SSH 密钥链接 GitHub](Connect-to-GitHub-with-SSH-Keys_zh.md) .
+**常用流程 1** - 本地更改 `push` 到远程储存库:
 
-### 4.2. 创建一个 GitHub 储存库
+```bash
+git switch <BranchName>
+# Do some changes in the project
+# Add local changes to the staged area
+git add .
+# Commit local changes to the local Git repository; Now there is a new version of your project
+git commit -m <Message>
+# Push the new version to the remote repository
+git push origin <BranchName>
+```
+
+**常用流程 2** - 远程储存库的更改 `pull` 到本地:
+
+```bash
+git switch <BranchName>
+# Pull the new version from the remote repository and merge it into the current branch
+git pull origin <BranchName> --no-rebase
+```
+
+总结来说, 当你的储存库中版本更新, 你应该 `push` 到远程储存库; 当远程储存库中版本更新, 你应该 `pull` 到本地储存库.
+
+### 4.2. 生成 SSH 密钥并连接 GitHub
+
+参考文章: [利用 SSH 密钥链接 GitHub](https://shusct.github.io/wiki/blog/connect-to-github-with-ssh-keys/) .
+
+### 4.3. 创建一个 GitHub 储存库
 
 根据 Fig.5, 我们可以在 GitHub 上创建一个新的远程 Git 储存库:
 1. 输入 GitHub 的网址进入首页并登录.
@@ -159,7 +190,7 @@ Figure 5. 如何创建一个远程 GitHub 储存库
 Figure 6. 获取远程储存库的 SSH 地址
 </p>
 
-### 4.3. 关联本地储存库与远程储存库
+### 4.4. 关联本地储存库与远程储存库
 
 在 [3. 本地 Git 储存库](#3-本地-git-储存库) 中, 我们已经创建了一个本地 Git 储存库, 并且提交了一些更改; 同时在 [4.2. 创建一个 GitHub 储存库](#42-创建一个-github-储存库) 中, 我们在 GitHub 上创建了一个新的远程 Git 储存库, 并获取了远程储存库的 SSH 地址.
 
@@ -176,7 +207,7 @@ git remote add origin <SSHAddress>
 假设远程储存库的默认分支名为 `main`, 先 `pull` 远程储存库中的内容:
 
 ```bash
-git pull origin main
+git pull origin main --no-rebase
 ```
 
 > 💡 `pull` 操作会把远程储存库中的较新内容拉取到本地储存库.
@@ -203,7 +234,7 @@ git push origin main
 
 > 💡 `push` 操作会把本地储存库中较新的内容推送至远程储存库.
 
-4.4. `clone` 远程储存库
+### 4.5. 直接 `clone` 远程储存库
 
 对于一个已有的远程储存库, 你可以直接通过以下命令将其 `clone` 至本地:
 
