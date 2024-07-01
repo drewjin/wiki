@@ -12,7 +12,7 @@ sudo apt install git
 
 ## 2. 在 Windows 上安装 Git
 
-安装 Scoop (参考: [在 Windows 上安装 Scoop](https://shusct.github.io/wiki/blog/install-scoop-on-windows/)) 后, 在终端中运行以下命令以安装 Git:
+安装 Scoop (参考: [在 Windows 上安装 Scoop](../install-scoop-on-windows/)) 后, 在终端中运行以下命令以安装 Git:
 
 ```powershell
 scoop install main/git

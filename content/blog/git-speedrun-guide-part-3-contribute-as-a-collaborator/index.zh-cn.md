@@ -13,7 +13,7 @@ title: "Git 速通指南 | Part 3: 作为协作者贡献"
 
 ## 2. `clone` 项目仓库
 
-参考 [Git 速通指南 | Part 1: 基础 - 4. 远程储存库](https://shusct.github.io/wiki/blog/git-speedrun-guide-part-1-basics/#4-%e8%bf%9c%e7%a8%8b%e5%82%a8%e5%ad%98%e5%ba%93) 中的内容, 将项目仓库 `clone` 至本地.
+参考 [Git 速通指南 | Part 1: 基础 - 4. 远程储存库](../git-speedrun-guide-part-1-basics/#4-远程-git-储存库) 中的内容, 将项目仓库 `clone` 至本地.
 
 ## 3. 查看 `issue`
 
@@ -50,7 +50,7 @@ git switch <BranchName>
 
 </p>
 
-参考 [Git 速通指南 | Part 1: 基础 -  1. 分支]() 创建新分支并推送至远程仓库. 例如, 如果你想解决 `issue #1` (关于支持 `std::format`), 你可以创建一个名为 `feature/#1-support-std-format` 的分支并推送至远程仓库; 参考以下命令:
+参考 [Git 速通指南 | Part 2: 分支于子模块 -  1. 分支](../git-speedrun-guide-part-2-branch-and-submodule/#1-分支) 创建新分支并推送至远程仓库. 例如, 如果你想解决 `issue #1` (关于支持 `std::format`), 你可以创建一个名为 `feature/#1-support-std-format` 的分支并推送至远程仓库; 参考以下命令:
 
 ```bash
 # Switch to the target branch
@@ -63,7 +63,7 @@ git push origin feature/#1-support-std-format:feature/#1-support-std-format
 
 ## 5. `push` 更改
 
-修改完成后, 请将更改 `add` 和 `commit` 到本地仓库, 接着先 `pull` 远程仓库的最新更改 (他人可能在你提交之前 `push` 到了你正在工作的分支, 你需要 `pull` 下来进行可能的[冲突处理]()), 然后再 `push` 你的更改至远程仓库:
+修改完成后, 请将更改 `add` 和 `commit` 到本地仓库, 接着先 `pull` 远程仓库的最新更改 (他人可能在你提交之前 `push` 到了你正在工作的分支, 你需要 `pull` 下来进行可能的[冲突处理](../git-speedrun-guide-part-2-branch-and-submodule/#13-冲突处理)), 然后再 `push` 你的更改至远程仓库:
 
 ```bash
 # Add local changes to the staged area

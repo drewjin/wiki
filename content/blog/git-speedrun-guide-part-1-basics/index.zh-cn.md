@@ -4,7 +4,7 @@ title: "Git 速通指南 | Part 1: 基础"
 
 ## 1. 安装 Git
 
-参考文章: [安装 Git](https://shusct.github.io/wiki/blog/install-git/) .
+参考文章: [安装 Git](../install-git) .
 
 > 📌 **注意**  
 > 如果你是 Windows 用户, 由于这个 [Issue](https://github.com/gitextensions/gitextensions/issues/5073) 尚未被解决, 我们建议使用 Git Bash (而非 PowerShell) 执行 Git 命令.
@@ -126,10 +126,10 @@ Fig.4 中的 Version 2 是当前项目的最新版本.
 ### 4.1. 基础工作流程
 
 1. SSH 密钥连接 GitHub: [4.2. 利用 SSH 密钥链接 GitHub](#42-生成-ssh-密钥并连接-github) .
-2. 已有本地储存库:
+2. 若已有本地储存库:
     - [4.3. 创建一个 GitHub 储存库](#43-创建一个-github-储存库) .
     - [4.4. 关联本地储存库与远程储存库](#44-关联本地储存库与远程储存库) .
-3. 已有远程储存库:
+3. 若已有远程储存库:
     - [4.5. 直接 `clone` 远程储存库](#45-直接-clone-远程储存库) .
 
 **常用流程 1** - 本地更改 `push` 到远程储存库:
@@ -157,7 +157,7 @@ git pull origin <BranchName> --no-rebase
 
 ### 4.2. 生成 SSH 密钥并连接 GitHub
 
-参考文章: [利用 SSH 密钥链接 GitHub](https://shusct.github.io/wiki/blog/connect-to-github-with-ssh-keys/) .
+参考文章: [利用 SSH 密钥链接 GitHub](../connect-to-github-with-ssh-keys/) .
 
 ### 4.3. 创建一个 GitHub 储存库
 

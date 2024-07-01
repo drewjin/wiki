@@ -2,11 +2,11 @@
 title: "Git 速通指南 | Part 2: 分支与子模块"
 ---
 
-在 [Git 速通指南 | Part 1: 基础](https://shusct.github.io/wiki/blog/git-speedrun-guide-part-1-basics/) 中, 我们已经学习了如何创建 Git 储存库, 如何 `add` 和 `commit` 更改, 以及如何进行 `push` 以及 `pull` 操作. 本文将继续介绍 Git 的分支与子模块的使用.
+在 [Git 速通指南 | Part 1: 基础](../git-speedrun-guide-part-1-basics/) 中, 我们已经学习了如何创建 Git 储存库, 如何 `add` 和 `commit` 更改, 以及如何进行 `push` 以及 `pull` 操作. 本文将继续介绍 Git 的分支与子模块的使用.
 
 ## 0. 准备工作
 
-请保证本地有一个与远程仓库关联的 Git 储存库. 如果没有, 请参考 [Git 速通指南 | Part 1: 基础](https://shusct.github.io/wiki/blog/git-speedrun-guide-part-1-basics/) 第 4 节创建一个远程储存库, 然后直接 `clone` 至本地.
+请保证本地有一个与远程仓库关联的 Git 储存库. 如果没有, 请参考 [Git 速通指南 | Part 1: 基础](../git-speedrun-guide-part-1-basics/) 第 4 节创建一个远程储存库, 然后直接 `clone` 至本地.
 
 ## 1. 分支
 

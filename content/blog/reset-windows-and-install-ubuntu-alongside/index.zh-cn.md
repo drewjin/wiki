@@ -15,6 +15,8 @@ title: 重置 Windows 并且安装 Ubuntu 双系统
 
 ## 2. 下载 Ubuntu Desktop
 
+> 💬 目前 Ubuntu 24.04 LTS 已经发布, LOGO 是大家最爱的鼠鼠, 感兴趣的同学可以参考本文安装 Ubuntu 24 哦~
+
 进入 https://ubuntu.com/download/desktop .
 
 Ubuntu 23 比较好看, 所以接下来我准备下载 23. 你也可以选择下载 22.
